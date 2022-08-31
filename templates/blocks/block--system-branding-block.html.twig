@@ -1,0 +1,28 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{% block content %}
+<div class="text-white mr-6">
+  {% if site_name %}
+    <a href="{{ path('<front>') }}" rel="home" class="flex items-center transition-opacity duration-300 no-underline hover:opacity-90 hover:no-underline">
+      <svg class="fill-current text-gray-200 inline-block h-8 w-8 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>    
+      <span class="text-yellow-400 text-2xl lg:text-3xl font-bold">{{ site_name }}</span>
+    </a>
+  {% endif %}
+  
+ </div>  
+{% endblock %}

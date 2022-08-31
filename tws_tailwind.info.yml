@@ -1,0 +1,27 @@
+# This theme is marked as @internal. It is intended to evolve and change over
+# minor releases.
+# As the UI of Drupal improves between minor versions, the markup and assets in
+# the tws theme will change. The tws theme is not backwards compatible
+# If you wish to modify the output or assets of tws you can:
+# 1. Copy the whole of tws and rename it as your own theme. You will need to
+# manually manage your own updates if you want to stay up to date with tws's
+# bug fixes and feature support.
+#
+# 2. Sub-theme tws. This is only recommended if you want to make minor
+# tweaks and understand that tws could break your modifications as it
+# changes.
+name: tws_tailwind
+type: theme
+base theme: stable
+description: 'A clean, accessible, and flexible Drupal front-end theme.'
+alt text: 'Screenshot of tws, Drupal front-end theme.'
+core_version_requirement: ^9
+version: VERSION
+
+libraries:
+  - tws_tailwind/global-styling
+  - tws_tailwind/alpine-js  
+regions:
+  header: Header
+  primary_menu: 'Primary menu'
+  content: Content

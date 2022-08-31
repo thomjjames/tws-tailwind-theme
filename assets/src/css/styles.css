@@ -1,0 +1,30 @@
+@tailwind base;
+ 
+@tailwind components;
+ 
+@tailwind utilities;
+
+/* Break up */
+.breadcrumb .breadcrumb-item:not(:last-child):after {
+  content: ' > ';
+}
+
+@layer components {
+  code {
+    @apply bg-gray-100;
+  }
+}
+
+.h-underline {
+  position: relative;
+}
+.h-underline::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 50%;
+  display: block;
+  max-width: 60px;
+  margin-top: 8px;  
+  @apply bg-yellow-400;
+}
